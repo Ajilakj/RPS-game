@@ -16,14 +16,16 @@ function finalScore(){
           startGame();
      }
      else{
-          alert("This is the final score card: You won "+scoreCard.user+ " times and computer won "+scoreCard.computer+" times and "+scoreCard.tie+" ties.");
+          //alert("This is the final score card: You won "+scoreCard.user+ " times and computer won "+scoreCard.computer+" times and "+scoreCard.tie+" ties.");
+          document.getElementById("user").textContent="You won "+(scoreCard.user)+ " times";
+          document.getElementById("computer").textContent="Computer won "+(scoreCard.computer)+ " times";
+          document.getElementById("tie").textContent="There were "+(scoreCard.tie)+ " ties";
      }
 }
 
 //checking user input includes r/p/s
 function isValid(inputFromUser){
      if(inputFromUser==="R" || inputFromUser==="P" || inputFromUser==="S"){
-          alert("testing");
           return true;
      }
      else{
